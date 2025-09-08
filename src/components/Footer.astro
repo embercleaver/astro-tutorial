@@ -1,10 +1,15 @@
 ---
-const platforms = ["github", "instagram"];
-
-const usernames = ["withastro", "thunderdog"];
+import Social from './Social.astro';
 ---
-
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
 <footer>
-  <p>Learn more about my projects on <a href={`https://www.${platforms[0]}.com/${usernames[0]}`}>{platforms[0]}</a>!</p>
-  <p>Check out my cool modeling pictures on <a href={`https://www.${platforms[1]}.com/${usernames[1]}`}>{platforms[1]}</a>!</p>
+  <Social platform="twitter" username="astrodotbuild" />
+  <Social platform="github" username="withastro" />
+  <Social platform="youtube" username="astrodotbuild" />
 </footer>
